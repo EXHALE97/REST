@@ -12,7 +12,7 @@ public class Database {
 
     public Database() throws ClassNotFoundException, IllegalAccessException, InstantiationException {
 
-        Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
+        Class.forName("com.mysql.jdbc.Driver").newInstance();
 
         url = ResourceBundle.getBundle("config").getString("db.url");
         user = ResourceBundle.getBundle("config").getString("db.user");

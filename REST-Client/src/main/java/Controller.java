@@ -24,7 +24,7 @@ import java.util.ResourceBundle;
 
 
 public class Controller implements Initializable {
-    private final String DEFAULT_SERVER = "http://localhost:8080/REST_server_war";
+    private final String DEFAULT_SERVER = "http://localhost:8080/rest";
     private String serverAddress = DEFAULT_SERVER;
 
     private static final Logger log = LogManager.getLogger(HandbookClientApp.class);
