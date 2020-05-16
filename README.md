@@ -57,6 +57,14 @@
 P.S. Не знаю почему так, но клиент бывает на каких-то действиях зависает, и для дальнейшей работы нужно перезапустить сервер tomcat. 
 
 # Запуск
+Изначально нужно добавить драйвер mysql в Tomcat/libs. Далее нужно в Tomcat/conf/server.xml внутри GlobalNamingResources добавить конфиг БД.
+
+`<Resource name="jdbc/j2eehandbook" auth="Container" type="javax.sql.DataSource" driverClassName="com.mysql.jdbc.Driver" url="jdbc:mysql://localhost:3306/j2eehandbook?useSSL=false" username= "username" password="password" maxIdle="20" minIdle="5" />`
+
+ЛИБО
+
+Открыть MySQL CMD и авторизоваться.
+
 - Для сервера:
 
     Нужно создать параметр запуска через Tomcat -> Local. Во вкладке Deployment добавить war артефакт. Application context и URL должны обновиться сами. При запуске сервера war файл приложение задеплоится на сервер и автоматом откроется браузер в нужном адресе. Должно быть типа так:
